@@ -11,3 +11,4 @@ def cel(x, y, tableau):
     return tableau[y][x]
 
 aff()
+
