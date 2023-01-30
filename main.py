@@ -1,6 +1,5 @@
 from random import randint
-import os 
-x = 4
+x = 3
 y = x
 tableau = [[randint(0,1) for k in range(x)]for i in range(y)]
 
@@ -12,23 +11,50 @@ def cel(x, y, tableau):
     return tableau[y][x]
 
 # aff()
-
-a = 1
-a = int(a)
+CopyTableau = tableau
 for i in range(len(tableau)):
     for j in range(len(tableau[i])):
-        (tableau[i][j - 1] == 1)
-        (tableau[i][j + 1] == 1)
-        (tableau[i + 1][j + 1] == 1)
-        (tableau[i + 1][j - 1] == 1)
-        (tableau[i - 1][j + 1] == 1)
-        (tableau[i - 1][j - 1] == 1)
-        (tableau[i - 1][j] == 1)
-        (tableau[i + 1][j] == 1)
-        
+        print(tableau[i])
+        print(tableau[i][j] == 1)
+        weight = 0
+        weight = int(weight)
+        if tableau [i - 1][j - 1] == 1:
+            weight = 1
+            weight = int(weight)
 
-#clear = lambda: os.system('cls')
-#clear()
+        if tableau [i - 1][j] == 1:
+            weight = weight + 1
+            weight = int(weight)
+
+        if tableau [i - 1][j + 1] == 1:
+            weight = weight + 1
+            weight = int(weight)
+
+        if tableau [i + 1][j - 1] == 1:
+            weight = weight + 1
+            weight = int(weight)
+
+        if tableau [i + 1][j + 1] == 1:
+            weight = weight + 1
+            weight = int(weight)
+
+        if tableau [i + 1][j] == 1:
+            weight = weight + 1
+            weight = int(weight)
+
+        if tableau [i + 1][j] == 1:
+            weight = weight + 1
+            weight = int(weight)
+
+        if tableau [i][j + 1] == 1:
+            weight = weight + 1
+            weight = int(weight)
+        
+        if weight > 3:
+            CopyTableau[i][j] = 0
+
+
+
 
 
 
