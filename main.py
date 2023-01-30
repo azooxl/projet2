@@ -10,7 +10,8 @@ def aff():
 def cel(x, y, tableau):
     return tableau[y][x]
 
-# aff()
+#aff()0
+
 CopyTableau = tableau
 for i in range(len(tableau)):
     for j in range(len(tableau[i])):
